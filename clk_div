@@ -82,7 +82,7 @@ always @ (posedge clk_in or negedge rst_n)		//上升沿产生分频时钟
 		    end
 	end
 
-always @ (posedge clk_in or negedge rst_n)			//下降沿产生分频时钟
+always @ (negedge clk_in or negedge rst_n)			//下降沿产生分频时钟
 	begin
 		if (!rst_n)
 			begin
